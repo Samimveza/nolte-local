@@ -1,0 +1,172 @@
+.storelocator-hero-container {
+  padding: 50px 50px;
+  background-image: url("/Pro_MILANO.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 126px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  & .storelocator-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+
+    & h1 {
+      & span {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.storelocator-hero-content-button {
+  display: flex;
+  gap: 20px;
+}
+
+.storelocator-magasins-container {
+  padding: 50px 50px;
+  background-color: var(--noltecream);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.storelocator-magasins-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.storelocator-magasins-list {
+  display: grid;
+  gap: 10px;
+  padding: 15px 50px;
+  background-color: var(--noltecream);
+}
+
+.storelocator-magasins-list-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  & .storelocator-magasins-list-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    & p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.all-locations {
+  padding: 20px 50px;
+  background-color: var(--noltecream);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  display: none;
+
+  & .all-locations-list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+
+    & .all-locations-list-one,
+    .all-locations-list-two {
+      width: 100%;
+
+      & ul {
+        & li {
+          list-style-type: decimal-leading-zero;
+          margin-left: 20px;
+          & a {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #000 !important;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .storelocator-magasins-filter {
+    flex-direction: row;
+    & .direction-button {
+      min-width: 200px;
+    }
+  }
+
+  .storelocator-magasins-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .all-locations {
+    display: flex;
+  }
+
+  .storelocator-hero-container {
+    justify-content: flex-start;
+
+    & .storelocator-hero-content {
+      padding: 0px 100px;
+      text-align: left;
+      & h1:first-of-type {
+        color: white;
+        font-size: 50px;
+        line-height: 50px;
+        & span {
+          color: white;
+          font-size: 40px;
+        }
+      }
+
+      & br:first-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .storelocator-magasins-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .storelocator-hero-container {
+    & .storelocator-hero-content {
+      padding: 0px 250px;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.gamme-hero {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--noltecream);
+
+  & .gamme-hero-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--noltecream);
+    padding: 20px 50px;
+  }
+
+  & .gamme-hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & .gamme-hero-content-text {
+      background-color: var(--noltecream);
+      padding: 20px 50px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.gamme-finitions {
+  background-color: black;
+  padding: 20px 0px;
+
+  & .image-grid {
+    padding: 0px 0px;
+  }
+
+  & .gamme-finitions-content {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.gamme-cuisines {
+  & .cuisines-container {
+    padding: 20px 50px;
+
+    & .cuisines-content {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .gamme-hero {
+    & .gamme-hero-header {
+      padding: 50px 250px;
+      padding-bottom: 0px;
+    }
+
+    & .gamme-hero-content {
+      padding: 50px 250px;
+      flex-direction: row;
+
+      & .gamme-hero-content-text {
+        padding: 0px 10px;
+      }
+
+      & img {
+        width: 60%;
+      }
+    }
+  }
+
+  .finitions-swiper {
+    max-width: 800px !important;
+    margin-top: 50px !important;
+  }
+
+  .gamme-finitions {
+    padding: 0px 0px;
+
+    & .gamme-finitions-content {
+      align-items: flex-start;
+      padding: 50px 0px;
+    }
+
+    & .image-grid {
+      padding: 0px 50px 50px 50px;
+      grid-template-columns: repeat(3, 1fr);
+      background-color: var(--noltecream);
+
+      & .image-grid-item:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .gamme-cuisines {
+    & .cuisines-container {
+      & .cuisines-content {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .gamme-finitions {
+    padding: 0px 0px;
+
+    & .image-grid {
+      padding: 0px 50px 50px 50px;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      background-color: var(--noltecream);
+
+      & .image-grid-item:last-child {
+        display: block;
+      }
+    }
+  }
+}

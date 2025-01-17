@@ -1,0 +1,55 @@
+@media (min-width: 1400px) {
+  .content {
+    margin-top: 115px;
+  }
+
+  h1 {
+    font-family: "Futura Bold", sans-serif;
+    font-size: 54px;
+    font-weight: normal;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    opacity: 1;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    opacity: 1;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: 0px;
+    font-weight: normal;
+  }
+
+  .nolte-container {
+    padding-left: 250px !important;
+    padding-right: 250px !important;
+  }
+
+  .nolte-button {
+    background-color: var(--noltegold);
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 27px;
+    border: none;
+    cursor: pointer;
+
+    & span {
+      font-size: 22px;
+      font-weight: 500;
+      /* line-height: 24px; */
+    }
+  }
+
+  .why-nolte-container {
+    & .why-nolte-header {
+      padding-left: 0px;
+    }
+  }
+}

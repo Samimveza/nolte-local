@@ -1,0 +1,95 @@
+.cotepro-hero-container {
+  background-color: black;
+  padding: 50px 50px;
+}
+
+.cotepro-cta-container {
+  background-color: var(--noltegold);
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+
+  & .cotepro-cta-textarea-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+
+    & .upload-file-container {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 10px;
+      width: 100%;
+
+      & span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    & textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 0px;
+      margin-top: 20px;
+      height: 150px;
+    }
+  }
+
+  & button {
+    padding: 15px 30px;
+  }
+}
+
+.cotepro-cta-footer {
+  & p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.brochure-container {
+  padding: 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+
+  & button {
+    padding: 15px 30px;
+    border: 2px solid var(--noltegold);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-us-form-container {
+    & form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .cotepro-cta-container {
+    & .cotepro-cta-textarea-container {
+      & button {
+        align-self: flex-end;
+      }
+
+      & .upload-file-container {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .cotepro-cta-footer {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,111 @@
+.hero-container {
+  background-image: url("/NK31866_MANHATTAN___Natureiche_edelmatt___SOFT_LAC.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: calc(100vh - 127px);
+  max-height: calc(100vh - 127px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0rem 0rem;
+  position: relative;
+}
+
+.hero-container .nolte-button {
+  margin-top: 55px;
+}
+
+.nolte-hero-badge {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nolte-hero-badge {
+    display: flex;
+    position: fixed;
+    width: 220px;
+    height: 65px;
+    right: -10px;
+    background-color: var(--noltegold);
+    padding: 10px 30px 10px 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: white;
+    box-shadow: 3px 3px 6px #00000029;
+    gap: 10px;
+    align-items: center;
+
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:nth-of-type(1) {
+      top: 22%;
+    }
+
+    &:nth-of-type(2) {
+      top: 30%;
+    }
+
+    &.first-badge {
+      top: 22%;
+    }
+
+    &.second-badge {
+      top: 30%;
+    }
+
+    & .nolte-hero-badge-text span:nth-child(1) {
+      font-size: 16px;
+      font-weight: 300;
+    }
+    & .nolte-hero-badge-text span:nth-child(3) {
+      font-size: 19px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .hero-container {
+    height: calc(50vh);
+    max-height: calc(50vh);
+    align-items: flex-start;
+    padding-left: 350px;
+    padding-right: 350px;
+    background-position: center;
+
+    & h1 {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: from-left 1s ease-in-out;
+    }
+
+    & h2 {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: from-left 1s 0.2s ease-in-out;
+    }
+  }
+
+  @keyframes from-left {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .hero-container .nolte-button {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-container {
+    height: calc(70vh);
+    max-height: calc(70vh);
+    overflow: hidden;
+  }
+}

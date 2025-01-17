@@ -1,0 +1,103 @@
+.cuisines-hero-container {
+  background-image: url("/public/Avocado/NK23807_WINDSOR_LACK___WeiSZ___Avocado.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 127px);
+  width: 100%;
+  position: relative;
+  padding: 0rem 0rem;
+  align-items: center;
+
+  & .cuisines-hero-content {
+    background-color: var(--noltecream);
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: calc(100% - 60px);
+
+    & h1 {
+      margin: 0px;
+      font-size: 32px;
+    }
+
+    & h2 {
+      margin: 0px;
+    }
+  }
+}
+
+.cuisines-listing-container {
+  padding: 50px 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & .cuisines-listing-header {
+    margin-bottom: 50px;
+    & h2 {
+      margin-bottom: 30px;
+    }
+
+    & p {
+      max-width: 600px;
+    }
+  }
+
+  & .cuisines-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & button {
+      padding: 1rem 2rem;
+    }
+  }
+
+  & .cuisines-container {
+    & .cuisines-content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  .cuisines-hero-container {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cuisines-hero-container {
+    height: 50vh;
+
+    & .cuisines-hero-content {
+      bottom: 50px;
+      max-width: 500px;
+      left: 200px;
+    }
+  }
+
+  .cuisines-listing-container {
+    padding: 50px 50px;
+
+    & .cuisines-filter-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    & .cuisines-container {
+      & .cuisines-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}

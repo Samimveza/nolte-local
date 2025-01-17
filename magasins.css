@@ -1,0 +1,260 @@
+.magasins-hero-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/NK31866_MANHATTAN___Natureiche_edelmatt___SOFT_LAC.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(90vh - 127px);
+
+  & .magasins-hero-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--noltecream);
+    padding: 20px 50px;
+  }
+
+  & .magasins-hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    & .magasins-opening-hours {
+      position: absolute;
+      bottom: -23%;
+      right: 0px;
+      width: fit-content;
+      text-align: center;
+      background-color: unset;
+      border: unset;
+      background-color: rgba(255, 255, 255, 0.753);
+      display: flex;
+      flex-direction: column;
+      padding: 0px 10px;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+
+      & span:first-of-type {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      & span {
+        padding: 3px 10px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      &:hover,
+      &:focus,
+      &:focus-within {
+        bottom: 0px;
+        cursor: pointer;
+      }
+    }
+
+    & .magasins-hero-content-text {
+      padding: 100px 50px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    & .magasins-hero-content-text-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    & p {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 400;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.cuisines-header-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.magasins-container-slider {
+  padding: 20px 50px;
+  overflow: hidden;
+}
+
+.magasins-cuisines-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 50px;
+
+  & .nolte-button {
+    padding: 10px 20px;
+    & span {
+      font-size: 22px;
+    }
+  }
+}
+
+.notre-equipe {
+  padding: 20px 50px;
+
+  & .notre-equipe-content {
+    display: grid;
+    gap: 20px;
+  }
+}
+
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+
+  & .avatar-text {
+    text-align: center;
+    & p:first-child {
+      font-size: 20px;
+    }
+  }
+
+  & .avatar-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: var(--noltegold) 3px solid;
+    background-color: gray;
+  }
+}
+#magasin-image-grid {
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+
+@media (min-width: 768px) {
+  #magasin-image-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .magasins-cuisines {
+    padding: 0px 50px;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .notre-equipe-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .magasins-hero-container {
+    & .magasins-hero-content {
+      & .magasins-opening-hours {
+        position: absolute;
+        bottom: -27%;
+        right: 10px;
+        width: fit-content;
+        text-align: center;
+        background-color: unset;
+        border: unset;
+        background-color: rgba(255, 255, 255, 0.753);
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px;
+        border: 1px solid var(--noltegold);
+        transition: all 0.3s ease-in-out;
+
+        & span:first-of-type {
+          padding: 10px;
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        & span {
+          padding: 3px 10px;
+          font-size: 18px;
+          font-weight: 400;
+        }
+
+        &:hover {
+          bottom: 0px;
+          cursor: pointer;
+        }
+      }
+
+      & .magasins-hero-content-text {
+        text-align: left;
+        padding-left: 250px;
+        margin: unset;
+
+        & .magasins-hero-content-text-cta {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+        }
+
+        & .nolte-button-light {
+          margin-bottom: 50px;
+          min-width: 100px;
+          width: fit-content;
+        }
+
+        & h1 {
+          font-size: 40px;
+          color: white;
+        }
+
+        & p {
+          font-size: 20px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  #magasin-image-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .magasins-hero-content-text {
+    max-width: 800px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .magasins-container-slider {
+    padding: 20px 0px;
+  }
+
+  .notre-equipe-content {
+    place-items: self-start;
+  }
+}

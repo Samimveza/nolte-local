@@ -1,0 +1,17 @@
+.brochure.contact-us-form-container{
+    background: #000;
+}
+
+.brochure-list{
+    padding-top:15px ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.brochure-list{
+    & button{
+        padding: 15px 5rem;
+    }
+}

@@ -1,0 +1,8 @@
+.inspiration-container {
+  padding: 50px 50px;
+  background-color: var(--noltecream);
+
+  & h2 {
+    margin-bottom: 30px;
+  }
+}

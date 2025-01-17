@@ -1,0 +1,43 @@
+.magasins-container {
+  background-color: black;
+  flex-direction: column;
+  padding: 50px 50px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+
+  & .locate-shop-container {
+    background-color: #fffbef;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    gap: 10px;
+
+    & input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 15px;
+      border: none;
+
+      &::placeholder {
+        color: var(--noltegold);
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .magasins-container {
+    padding: 50px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & .locate-shop-container {
+      width: 50%;
+    }
+  }
+}
