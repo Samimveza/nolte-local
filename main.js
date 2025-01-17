@@ -90,3 +90,48 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Swiper
+  const whyNolteSwiper = new Swiper(".why-nolte-swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+
+  // Get the total number of slides
+  const totalSlides = document.querySelectorAll(".why-nolte-swiper .swiper-slide").length;
+
+  // Dynamically create navigation buttons
+  const navContainer = document.querySelector(".slider-navigation");
+  for (let i = 0; i < totalSlides; i++) {
+    const button = document.createElement("button");
+    button.classList.add("slider-nav-button");
+    button.setAttribute("data-slide", i);
+
+    // Format number as two digits (e.g., 01, 02, 03)
+    button.textContent = (i + 1).toString().padStart(2, "0");
+    navContainer.appendChild(button);
+
+    // Add click event listener to navigate to the specific slide
+    button.addEventListener("click", () => {
+      whyNolteSwiper.slideTo(i); // Navigate to the corresponding slide
+    });
+  }
+
+  // Add active class to the current button
+  const navButtons = navContainer.querySelectorAll(".slider-nav-button");
+  whyNolteSwiper.on("slideChange", () => {
+    const activeIndex = whyNolteSwiper.activeIndex;
+    navButtons.forEach((btn, index) => {
+      btn.classList.toggle("active", index === activeIndex);
+    });
+  });
+
+  // Initially activate the first button
+  navButtons[0].classList.add("active");
+});

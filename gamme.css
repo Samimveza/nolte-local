@@ -16,13 +16,13 @@
   & .gamme-hero-content {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: normal;
     flex-direction: column;
 
     & .gamme-hero-content-text {
       background-color: var(--noltecream);
       padding: 20px 50px;
-      text-align: center;
+      text-align: left;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -76,7 +76,7 @@
       flex-direction: row;
 
       & .gamme-hero-content-text {
-        padding: 0px 10px;
+        padding: 0px 20px;
       }
 
       & img {

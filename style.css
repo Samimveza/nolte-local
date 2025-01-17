@@ -538,3 +538,61 @@ p {
     }
   }
 }
+
+.slider-navigation{
+  display:flex;
+justify-content:center;
+margin-bottom:50px;
+}
+.slider-navigation > button{    
+  background-color: transparent !important;
+  border: none;
+  font-size: 25px;
+margin:0 30px;
+color:#c49a4c;
+cursor:pointer;
+}
+.slider-navigation > button:hover{
+  opacity:0.8}
+.slider-navigation > .active{
+  color:#000000!important;
+  text-decoration:underline;
+  text-underline-offset:5px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.filter-checkbox label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-checkbox input[type="checkbox"] {
+  appearance: none; /* Remove the default checkbox styling */
+  -webkit-appearance: none; /* For Safari */
+  background-color: transparent;
+  border: 2px solid #c49a4c; /* Red border */
+  width: 20px; /* Set size */
+  height: 20px;
+  border-radius: 4px; /* Optional: Make it rounded */
+  margin-right: 8px; /* Space between checkbox and text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover/active states */
+}
+
+.filter-checkbox input[type="checkbox"]:checked {
+  background-color: #c49a4c; /* Change background when checked */
+}
+
+.filter-checkbox input[type="checkbox"]:hover {
+  border-color: #c49a4c; /* Darker red on hover */
+}
+
+
+.locate-shop-container.bg-white{
+  border:1px solid #c49a4c;
+}

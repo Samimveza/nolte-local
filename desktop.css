@@ -1,8 +1,11 @@
 @media (min-width: 1400px) {
+
   .content {
     margin-top: 115px;
   }
-
+  .inspiration-content{
+    margin-top: 170px!important;
+  }
   h1 {
     font-family: "Futura Bold", sans-serif;
     font-size: 54px;
