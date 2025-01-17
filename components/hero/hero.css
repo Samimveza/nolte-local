@@ -36,6 +36,7 @@
     box-shadow: 3px 3px 6px #00000029;
     gap: 10px;
     align-items: center;
+    z-index:100;
 
     & img {
       width: 20px;
@@ -48,6 +49,7 @@
 
     &:nth-of-type(2) {
       top: 30%;
+
     }
 
     &.first-badge {
@@ -109,3 +111,5 @@
     overflow: hidden;
   }
 }
+
+

@@ -75,7 +75,7 @@
 
 @media (min-width: 1024px) {
   .cuisines-hero-container {
-    height: 50vh;
+    height: 70vh;
 
     & .cuisines-hero-content {
       bottom: 50px;
