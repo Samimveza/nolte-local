@@ -81,7 +81,7 @@
   bottom: -145px;
   left: 5%;
   max-width: 100%;
-  max-height: 289px;}
+  max-height: 289px;object-fit: cover;}
 
 .inspiration-image > img:last-child{width: 35%;
   width: 35%;
@@ -90,4 +90,4 @@
   bottom: -285px;
   left: 35%;
   max-width: 100%;
-  max-height: 289px;}
+  max-height: 289px;object-fit: cover;}
